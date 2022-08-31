@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Project Reqs: 
+        html, css, & jQuery;
+        hamburger menu toggle in/out; 
+        content<1000px;
+        if screen<1000px then content=100% of screen; 
+        2 breakpoints (at 1000px and one other);
+        use any filler text;
+        must use provided assets, may use others; -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Halifax Canoe and Kayak</title>
+        <link rel="stylesheet" href="styles.css">
+       
+        <!--jQuery hosted on Google'S CDN-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- favicon -->
+            <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_b/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_b/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_b/favicon-16x16.png">
+            <link rel="manifest" href="/assets/favicon_b/site.webmanifest">
+      
+        <!-- font -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+     
+     <style>
+            .desktop, .print {
+            display: none;
+            }
+
+            @media print {
+                .mobile, .desktop {
+                    display: none;
+                }
+                .print {
+                    display: block;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                .mobile {
+                    display: none;
+                }
+                .desktop {
+                    display: block;
+                }
+            }
+        </style>
+    </head>
+
+<body>
+
+    <header>
+        <nav>
+            <div id="header">
+                <button id="togglebtn">
+                    <img src="/assets/hamburger.png" id="hamburgerButton" alt="Button which opens and closes navigation menu">
+                </button>
+
+                <p> Halifax Canoe and Kayak </p>
+            
+                <img src="/assets/paddle-white.png" class="whitePaddle" alt="Image of two white paddles forming an X">
+
+            </div>  
+            
+            <div id="sideBar" class="hideMenu">
+                    <ul class="links">
+                        <li><a href="/">Home</a></li>
+                        
+                        <li><a href="/book_trip.html">Book Trip</a></li>
+                        
+                        <li><a href="/admin_login.html">Admin Login</a></li>
+                    </ul>
+                
+            </div>
+        </nav>
+    </header>
+
+  
+    <main>
+        <article id="container">
+
+            <figure>
+                <img id="canoe" src="/assets/canoe.jpg" alt="photograph of an empty canoe at the side of a lake">
+                <figcaption id="title">Come Experience<br> Canada</figcaption>
+            </figure>
+
+
+            <h1>Upcoming Adventures</h1>
+
+            <div class="container2">
+                <figure>
+                    <img class="imgCity" id="imgHalifax" src=/assets/halifax.jpg>
+                    <figcaption id="Halifax">Halifax</figcaption>
+                </figure>
+
+            <div class="info">
+                    <p>
+                        Date: 2022-09-12<br>
+                        Duration: 4 days
+                    </p>
+            </div>
+
+            
+                <h3>Summary</h3>
+                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+            </div>
+
+            <div class="container2">
+                <figure>
+                <img class="imgCity" id="imgSydney" src="/assets/sydney.jpg" alt="aerial photograph of Sydney, Nova Scotia's harbour">
+                <figcaption id="Sydney">Sydney</figcaption>
+                </figure>
+            </div>
+
+            <div class="info">
+                    <p>
+                        Date: 2022-09-20<br>
+                        Duration: 3 days
+                    </p>
+                
+
+                <h3>Summary</h3>
+                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <br>
+                    <br>
+                    </p>
+            </div>
+
+
+            <!-- Check the responsive styles work:
+            <div class="desktop">Desktop</div>
+            <div class="mobile">Mobile</div>
+            <div class="print">Print</div>-->
+        </article>
+    </main>
+
+    <footer>
+        <p>
+           Halifax Canoe and Kayak 2022 ⓒ
+        </p>
+        <img src="/assets/paddle-white.png" class="whitePaddle" alt="Image of two white paddles forming an X">
+
+    </footer>
+
+    <script>
+
+        $(document).ready(function() {
+            toggleBtn_click();
+         });
+
+
+        function toggleBtn_click() {
+            $("#hamburgerButton").click(function() {
+                $("#sideBar").toggle(
+                    function() {
+                        $("#sideBar").removeClass(".hideMenu")
+                    }
+                )
+            });
+        };  
+
+
+    </script>
+</body>
+</html>
+
