@@ -3,31 +3,9 @@
 echo "<style>";
 include "styles.css";
 echo "</style>";
-
-/* if (isset($_GET['name'], $_GET['email'], $_GET['location'], $_GET['tripDate'])) {
-    $name = $_GET['name'];
-    $email = $_GET['email'];
-    $location = $_GET['location'];
-    $tripDate = $_GET['tripDate'];
-    
-    //show input data
-    echo "Thank you, $name. Once available, further details about the $location trip on $tripDate will be sent to $email.<br>";        
-} else {
-    echo "Please provide the requested information if you wish to book a trip.";
-}
-
-if (isset($_GET['confirmation'], $_GET['email'])) {
-     $confirmation = $_GET['confirmation'];
-     $email = $_GET['email'];
-     
-    echo "A confirmation email has been sent to $email. Please check your inbox.";   
-} else {
-    echo "";
-} */
-//?>
-
+?>
 <!DOCTYPE html>
-<html lang="en">       
+<html>       
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
